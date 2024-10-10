@@ -16,7 +16,7 @@ class WeatherData(Base):
     __tablename__ = 'weather_data'
 
     id = Column(Integer, primary_key=True)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3])
     temperature = Column(Float)
     wind_direction = Column(String)
     wind_speed = Column(Float)
@@ -34,7 +34,6 @@ with open("./src/configs/db_config.yaml", "r", encoding="utf_8") as file:
         password=config[DBMS]["password"],
         database=config[DBMS]["database"]
     )
-    print(url_object)
 
 engine = create_engine(url_object)
 if not database_exists(engine.url):
