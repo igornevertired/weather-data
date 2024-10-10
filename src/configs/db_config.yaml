@@ -1,0 +1,5 @@
+Postgres:
+  host: "localhost"
+  username: "postgres"
+  password: "1353"
+  database: "weatherapp"
