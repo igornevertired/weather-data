@@ -23,8 +23,8 @@
  - weather_data.py: Основной скрипт, который запрашивает данные погоды и сохраняет их в базу данных.
  - models.py: Определение моделей данных с использованием SQLAlchemy.
  - export_data.py: Скрипт для экспорта данных из базы данных в Excel файл.
-   data
+   # data
    - weather_data.xlsx - Пример файла Excel с выгруженными данными.
-   configs
+   # configs
    - db_config.yaml - YAML файл с конфигурацией подключения к базе данных PostgreSQL
 
